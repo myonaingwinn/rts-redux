@@ -2,7 +2,16 @@ import { IRepositoryState } from "../../types/RepositoryState";
 import { ActionType } from "../action-types";
 import { Action } from "../actions";
 
-const reducer = (state: IRepositoryState, action: Action): IRepositoryState => {
+const initialState = {
+	loading: false,
+	error: null,
+	data: [],
+};
+
+const reducer = (
+	state: IRepositoryState = initialState,
+	action: Action
+): IRepositoryState => {
 	switch (action.type) {
 		case ActionType.SEARCH_REPOSITORIES:
 			return { loading: true, error: null, data: [] };
