@@ -7,7 +7,7 @@ function App() {
 	return (
 		<Provider store={store}>
 			<div className="App">
-				<h2>Search for a Package</h2>
+				<h1>Search for a Package</h1>
 				<RepositoryList />
 			</div>
 		</Provider>
